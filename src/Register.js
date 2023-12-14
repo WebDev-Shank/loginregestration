@@ -28,15 +28,14 @@ const Register = () => {
   }, []);
 
   const handleRegister = () => {
-    if (name === "" || mobile === "" || email === "" || pass === "") {
-      swal("😅 ", "Please fill all the fields", "warning");
-    }
     if (checkEmail.includes(email)) {
       swal(
         "Sorry Your Email Already Registered with us",
         "Try to use different email",
         "warning"
       );
+    } else if (name === "" || mobile === "" || email === "" || pass === "") {
+      swal("😅 ", "Please fill all the fields", "warning");
     } else {
       const url = "http://localhost:1234/account";
       const userInfo = { name: name, mobile: mobile, email: email, pass: pass };
