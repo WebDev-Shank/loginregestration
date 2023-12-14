@@ -10,7 +10,12 @@ const Login = () => {
     if (e === "" || p === "") {
       swal("Error", "Empty Email or Password", "warning");
     } else {
-      const url = "http://localhost:1234/account?email=" + e + "&password=" + p;
+      const url =
+        "https://employeedata-fb7q.onrender.com/account?email=" +
+        e +
+        "&password=" +
+        p;
+      // const url = "http://localhost:1234/account?email=" + e + "&password=" + p;
       fetch(url)
         .then((res) => res.json())
         .then((userInfo) => {
@@ -19,6 +24,8 @@ const Login = () => {
             swal("Failed", "User ,Invalid or Not Exist", "error");
           } else {
             localStorage.setItem("userName", userInfo[0].name);
+            localStorage.setItem("userEmail", userInfo[0].email);
+            localStorage.setItem("userMobile", userInfo[0].mobile);
             window.location.replace("http://localhost:3000/#/user");
           }
         });

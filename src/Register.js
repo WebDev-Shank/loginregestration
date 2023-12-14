@@ -11,7 +11,8 @@ const Register = () => {
   const [checkEmail, setCheckEmail] = useState("");
 
   const login = () => {
-    const url = "http://localhost:1234/account";
+    // const url = "http://localhost:1234/account";
+    const url = "https://employeedata-fb7q.onrender.com/account";
     fetch(url)
       .then((res) => res.json())
       .then((userInfo) => {
@@ -37,7 +38,8 @@ const Register = () => {
     } else if (name === "" || mobile === "" || email === "" || pass === "") {
       swal("😅 ", "Please fill all the fields", "warning");
     } else {
-      const url = "http://localhost:1234/account";
+      // const url = "http://localhost:1234/account";
+      const url = "https://employeedata-fb7q.onrender.com/account";
       const userInfo = { name: name, mobile: mobile, email: email, pass: pass };
       const postData = {
         headers: { "content-type": "application/json" },
@@ -55,7 +57,7 @@ const Register = () => {
           swal("😊", "Your Account Created Successfully", "success");
           setTimeout(() => {
             window.location.replace("http://localhost:3000/login");
-          }, 3000);
+          }, 2000);
         });
     }
   };
