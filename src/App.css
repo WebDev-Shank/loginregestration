@@ -1,38 +1,86 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark {
+  background: #000;
+  color: aliceblue;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.light {
+  background: white;
+  color: #000;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 400px;
+  margin: 0px auto;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px 0px gray;
+  padding: 20px;
+}
+.head {
+  line-height: 8px;
+}
+.body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.body > input {
+  width: 90%;
+  height: 40px;
+  padding: 0px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid gray;
+}
+.body > button {
+  width: 30%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: darkslateblue;
   color: white;
+  border: none;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.register {
+  text-align: center;
+  font-size: 18px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.register a {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 6px;
+}
+.hh {
+  margin: 0;
+  padding: 0;
+  height: 94.7vh;
+}
+.logout {
+  font-size: 20px;
+  width: 100px;
+  height: 30px;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  background-color: blueviolet;
+  cursor: pointer;
+}
+.name {
+  color: green;
+}
+.user {
+  background: #000;
+  color: aliceblue;
+  padding: 20px 10px;
+  margin: 0 0 20px 0;
 }
