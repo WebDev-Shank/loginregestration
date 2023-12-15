@@ -20,5 +20,5 @@ const UserPage = () => {
 
 export default UserPage;
 const logout = () => {
-  window.location.replace("http://localhost:3000/login");
+  window.location.replace("http://localhost:3000/");
 };

@@ -56,7 +56,7 @@ const Register = () => {
           setPass("");
           swal("😊", "Your Account Created Successfully", "success");
           setTimeout(() => {
-            window.location.replace("http://localhost:3000/login");
+            window.location.replace("http://localhost:3000/");
           }, 2000);
         });
     }
