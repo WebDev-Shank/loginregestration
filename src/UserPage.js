@@ -20,5 +20,11 @@ const UserPage = () => {
 
 export default UserPage;
 const logout = () => {
-  window.location.replace("http://localhost:3000/");
+  window.location.replace(
+    // for deploy
+    "https://webdev-shank.github.io/loginregestration/#/"
+
+    //for start
+    // "http://localhost:3000/loginregestration"
+  );
 };

@@ -15,7 +15,6 @@ const Login = () => {
         e +
         "&password=" +
         p;
-      // const url = "http://localhost:1234/account?email=" + e + "&password=" + p;
       fetch(url)
         .then((res) => res.json())
         .then((userInfo) => {
@@ -26,7 +25,13 @@ const Login = () => {
             localStorage.setItem("userName", userInfo[0].name);
             localStorage.setItem("userEmail", userInfo[0].email);
             localStorage.setItem("userMobile", userInfo[0].mobile);
-            window.location.replace("http://localhost:3000/#/user");
+            window.location.replace(
+              // for deploy
+              "https://webdev-shank.github.io/loginregestration/#/user"
+
+              // for start
+              // "http://localhost:3000/loginregestration/#/user"
+            );
           }
         });
     }

@@ -11,7 +11,6 @@ const Register = () => {
   const [checkEmail, setCheckEmail] = useState("");
 
   const login = () => {
-    // const url = "http://localhost:1234/account";
     const url = "https://employeedata-fb7q.onrender.com/account";
     fetch(url)
       .then((res) => res.json())
@@ -38,7 +37,6 @@ const Register = () => {
     } else if (name === "" || mobile === "" || email === "" || pass === "") {
       swal("😅 ", "Please fill all the fields", "warning");
     } else {
-      // const url = "http://localhost:1234/account";
       const url = "https://employeedata-fb7q.onrender.com/account";
       const userInfo = { name: name, mobile: mobile, email: email, pass: pass };
       const postData = {
@@ -56,7 +54,13 @@ const Register = () => {
           setPass("");
           swal("😊", "Your Account Created Successfully", "success");
           setTimeout(() => {
-            window.location.replace("http://localhost:3000/");
+            window.location.replace(
+              //for deploy
+              "https://webdev-shank.github.io/loginregestration/#/"
+
+              // for start
+              // "http://localhost:3000/loginregestration/#/"
+            );
           }, 2000);
         });
     }
